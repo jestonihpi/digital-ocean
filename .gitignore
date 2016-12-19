@@ -1,47 +1,36 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Thanks to: https://gist.github.com/jdbartlett/444295
 
-# Folder config file
-Desktop.ini
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!purecss/
+www/*
+!.gitignore
+!www/wp-content/
+*.sql
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
+www/wp-content/*
+!www/wp-content/plugins/
+!www/wp-content/themes/
 
-# Windows shortcuts
-*.lnk
+# Ignore everything in the "themes" directory, except the themes you specify
+www/wp-content/themes/*
+!www/wp-content/themes/purecss.io-wordpress/
+!www/wp-content/themes/purecss.io-wordpress-child/
 
-# =========================
-# Operating System Files
-# =========================
+# Other
+www/wp-content/upgrade
+www/wp-content/uploads/*
+!www/wp-content/uploads/revisr-backups/
+!www/wp-content/uploads/revisr-backups/*.sql
+www/sitemap.*
+www/wp-config.php
 
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Hidden files
+*.DS_Store
+*Thumbs.db
+*.sass-cache*
+*~imageoptim*
+www/.htaccess
+*.htaccess
